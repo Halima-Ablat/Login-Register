@@ -1,14 +1,18 @@
-import { Link } from "react-router-dom";
-import "./LoginRegister.css";
+import {Link} from "react-router-dom";
+import "./Register.css"
 import { FaUser, FaLock } from "react-icons/fa";
 
-function LoginRegister() {
+function Register() {
   return (
-    <div className="wrapper-container">
+    <div className="wrapper">
       <div className="form-container">
-        <h1 className="text-center">Login</h1>
+        <h1 className="text-center">Register</h1>
         <div className="input-container">
           <input type="text" placeholder="Username" required />
+          <FaUser className="icon" />
+        </div>
+        <div className="input-container">
+          <input type="email" placeholder="Email" required />
           <FaUser className="icon" />
         </div>
         <div className="input-container">
@@ -27,8 +31,8 @@ function LoginRegister() {
         <button className="mt-3">Login</button>
         <div className="d-flex justify-content-around mt-3">
           <p>Don't have an account?</p>
-          <Link to={"/register"} className=" text-white fw-bold underline-text">
-            Register
+          <Link to={"/"} className=" text-white fw-bold underline-text">
+            Login
           </Link>
         </div>
       </div>
@@ -36,4 +40,4 @@ function LoginRegister() {
   );
 }
 
-export default LoginRegister;
+export default Register;
